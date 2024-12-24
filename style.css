@@ -2,49 +2,50 @@
 @font-face {
     font-family: xmas;
     src: url('font/xmasfont.ttf');
-}
-
-/* Geral */
-body {
+  }
+  
+  /* Corpo e fundo */
+  body {
     background: url('assets/bg.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     color: white;
-}
-
-.navbar-toggler {
-    color: red;
-    background-color: white;
-    opacity: 50%;
-    font-size: 15px;
-}
-
-/* Textos */
-#wish {
-    font-size: 70px;
-    font-family: xmas;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar-dark .navbar-nav .nav-link {
     color: white;
-    text-align: center;
-}
-
-#fonts_eu {
+  }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    opacity: 0.7;
+  }
+  
+  /* Textos */
+  #wish {
+    padding-top: 100px;
+    font-size: 3rem;
+    font-family: xmas, cursive;
+    color: white;
+  }
+  
+  #fonts_eu {
     color: aliceblue;
     padding: 10px;
     text-align: justify;
     line-height: 1.5;
-}
-
-#wish2 {
-    font-size: 50px;
-    font-family: xmas;
-    color: white;
-}
-
-/* Neve */
-.snowflake {
+    font-size: 1.2rem;
+  }
+  
+  /* Imagem */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Neve */
+  .snowflake {
     --size: 1vw;
     width: var(--size);
     height: var(--size);
@@ -52,102 +53,45 @@ body {
     border-radius: 50%;
     position: absolute;
     top: -5vh;
-}
-
-/* Galeria */
-#gallery {
-    padding-top: 100px;
-}
-
-#countdown {
-    color: white;
-    font-family: xmas;
-    font-size: 70px;
-    padding-top: 300px;
-}
-
-#card {
-    padding-top: 300px;
-    color: white;
-    font-family: xmas;
-}
-
-#git {
-    font-size: 60px;
-    color: white;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-#git:hover {
-    opacity: 80%;
-    color: white;
-}
-
-/* Consultas de mídia para responsividade */
-@media (max-width: 1200px) {
+    animation: snowfall 10s linear infinite;
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translate3d(var(--left-start), 0, 0);
+    }
+    100% {
+      transform: translate3d(var(--left-end), 110vh, 0);
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1200px) {
     #wish {
-        font-size: 50px;
-    }
-    #wish2 {
-        font-size: 40px;
-    }
-    #counter {
-        font-size: 40px;
-    }
-    #git {
-        font-size: 40px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    #wish {
-        font-size: 40px;
-    }
-    #wish2 {
-        font-size: 30px;
-    }
-    #counter {
-        font-size: 30px;
-    }
-    #git {
-        font-size: 30px !important;
+      font-size: 2.5rem;
     }
     #fonts_eu {
-        font-size: 14px;
+      font-size: 1rem;
     }
-}
-
-@media (max-width: 576px) {
+  }
+  
+  @media (max-width: 768px) {
     #wish {
-        font-size: 30px;
-    }
-    #wish2 {
-        font-size: 20px;
+      font-size: 2rem;
     }
     #fonts_eu {
-        font-size: 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #wish {
+      font-size: 1.5rem;
+    }
+    #fonts_eu {
+      font-size: 0.8rem;
     }
     .navbar-toggler {
-        font-size: 12px;
+      font-size: 12px;
     }
-}
-
-/* Para orientação retrato */
-@media (orientation: portrait) {
-    #wish {
-        font-size: 30px;
-    }
-    #wish2 {
-        font-size: 30px;
-    }
-    #counter {
-        font-size: 30px;
-    }
-    #git {
-        font-size: 30px !important;
-    }
-}
-
-
-    
+  }
