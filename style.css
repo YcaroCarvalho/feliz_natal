@@ -215,7 +215,11 @@ body {
     font-family: xmas;
     color: white;
 }
-
+#fonts_eu{
+    color: aliceblue;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 #wish2 {
     font-size: 50px;
     font-family: xmas;
